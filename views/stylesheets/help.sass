@@ -8,7 +8,7 @@
 
 html, body
   +reset
-  :background-color = !ancillary_darkest
+  # :background-color = !ancillary_darkest
   :color = !ancillary_light
   :height 100%
   a
@@ -20,39 +20,41 @@ html, body
 +clear
 
 = section-background
-  :background-color #252630
-  :background-image url(/images/help/section-background-purple.png)
+  # :background-color #252630
+  # :background-image url(/images/help/section-background-purple.png)
   :background-repeat repeat-x
   :background-position left top
 = aside-background
-  :background-color #21222b
-  :background-image url(/images/help/aside-background-purple.png)
+  # :background-color #21222b
+  # :background-image url(/images/help/aside-background-purple.png)
   :background-repeat repeat-x
   :background-position left top
 = fullheight
   :min-height 100%
 = background(!padding = "none", !zindex = "0")
   .background
-    .left, .right
-      :position absolute
-      :top 0
-      :z-index = !zindex
-      :width 50%
-      +fullheight
-      :padding-top = !padding
-    .left
-      :left 0
-      +section-background
-    .right
-      :right 0
-      +aside-background
+    # .left, .right
+    #   :position absolute
+    #   :top 0
+    #   :z-index = !zindex
+    #   :width 50%
+    #   +fullheight
+    #   :padding-top = !padding
+    # .left
+    #   :left 0
+    #   +section-background
+    # .right
+    #   :right 0
+    #   +aside-background
 
 .container
   :width 100%
-  :height 100%
-  :min-height 100%
-  :position relative
+  # :height 100%
+  # :min-height 100%
+  # :position relative
   #body-background
+    :background-image url(/images/help/bg_fix.png)
+    :background-position center
     :position fixed
     :z-index -1
     :bottom 0
@@ -63,6 +65,10 @@ html, body
       :background-color #21222b
     .section, .background .left
       :background-color #252630
+  .overlay
+    :background-image url(/images/help/bg_overlay.png)
+    :background-repeat repeat-x
+    :background-position top left
   .container
     :position relative
     :text-align center
@@ -105,7 +111,7 @@ html, body
           :width 10px
           :left 0
           :top 0
-          :background-image url(/images/help/aside-shadow-purple.png)
+          # :background-image url(/images/help/aside-shadow-purple.png)
           :background-repeat repeat-y
           :background-position left top
           
@@ -238,6 +244,8 @@ html, body
 @import _header.sass
 
 .header
+  .logo
+    :background-color #1c1c1c
   .header
     :background-image url(/images/help/pattern-yukiwa_sakura.png)
     :background-repeat repeat-x
